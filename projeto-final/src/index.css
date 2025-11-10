@@ -1,0 +1,18 @@
+* { box-sizing: border-box; }
+body { font-family: Arial, sans-serif; margin: 0; background:#f7f7f8; color:#222; }
+nav { background:#222; color:#fff; padding:12px 20px; display:flex; justify-content:space-between; align-items:center; }
+nav a { color:#fff; margin-right:10px; text-decoration:none; }
+.container { max-width:1100px; margin:0 auto; }
+.grid { display:flex; gap:16px; flex-wrap:wrap; justify-content:center; }
+.card { background:#fff; padding:14px; border-radius:8px; box-shadow:0 2px 6px rgba(0,0,0,0.08); width:260px; text-align:center; }
+.btn { padding:8px 12px; border:none; border-radius:6px; cursor:pointer; }
+.btn-primary { background:#2b7a78; color:#fff; }
+.form-row { margin-bottom:10px; }
+.input { width:100%; padding:8px; border-radius:6px; border:1px solid #ddd; }
+.footer { background:#eee; text-align:center; padding:12px; margin-top:20px; }
+
+/* Responsivo: mobiles */
+@media (max-width: 768px) {
+  .card { width:100%; max-width:420px; }
+  nav { flex-direction:column; gap:8px; align-items:flex-start; }
+}

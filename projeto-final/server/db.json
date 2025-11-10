@@ -1,0 +1,10 @@
+{
+  "products": [
+    { "id": 1, "name": "Camiseta", "price": 49.9, "category": "Roupas", "stock": 10, "image": "" },
+    { "id": 2, "name": "Tênis", "price": 199.9, "category": "Calçados", "stock": 5, "image": "" },
+    { "id": 3, "name": "Caneca", "price": 19.9, "category": "Acessórios", "stock": 20, "image": "" }
+  ],
+  "users": [
+    { "id": 1, "username": "admin", "password": "123456" }
+  ]
+}
