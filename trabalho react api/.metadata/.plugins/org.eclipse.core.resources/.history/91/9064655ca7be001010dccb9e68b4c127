@@ -1,0 +1,84 @@
+package br.com.serratec.dto;
+
+import java.util.UUID;
+import br.com.serratec.entity.Categoria;
+import br.com.serratec.entity.Produto;
+
+public class ProdutoResponseDTO {
+
+    private UUID id;
+    private String nome;
+    private Double valor;
+    private String descricao;
+    private String imagemUrl; // NOVO CAMPO
+    private CategoriaResponseDTO categoria;
+
+    public static record CategoriaResponseDTO(UUID id, String nome) {
+        public CategoriaResponseDTO(Categoria categoria) {
+            this(categoria.getId(), categoria.getNome());
+        }
+    }
+
+    public ProdutoResponseDTO() {
+    }
+
+    public ProdutoResponseDTO(Produto produto) {
+        this.id = produto.getId();
+        this.nome = produto.getNome();
+        this.valor = produto.getValor();
+        this.descricao = produto.getDescricao();
+        this.imagemUrl = produto.getImagemUrl();
+        
+        if (produto.getCategoria() != null) {
+            this.categoria = new CategoriaResponseDTO(produto.getCategoria());
+        }
+    }
+
+    public UUID getId() {
+        return id;
+    }
+
+    public void setId(UUID id) {
+        this.id = id;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+	public Double getValor() {
+		return valor;
+	}
+
+	public void setValor(Double valor) {
+		this.valor = valor;
+	}
+
+    public CategoriaResponseDTO getCategoria() {
+        return categoria;
+    }
+
+    public void setCategoria(CategoriaResponseDTO categoria) {
+        this.categoria = categoria;
+    }
+
+	public String getDescricao() {
+		return descricao;
+	}
+
+	public void setDescricao(String descricao) {
+		this.descricao = descricao;
+	}
+
+	public String getImagemUrl() {
+		return imagemUrl;
+	}
+
+	public void setImagemUrl(String imagemUrl) {
+		this.imagemUrl = imagemUrl;
+	}
+}

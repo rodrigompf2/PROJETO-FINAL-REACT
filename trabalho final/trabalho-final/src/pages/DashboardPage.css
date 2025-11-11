@@ -1,0 +1,83 @@
+.dashboard-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: var(--cor-branca);
+  border-radius: 8px;
+  box-shadow: var(--sombra-caixa);
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--cor-borda);
+}
+
+.dashboard-header h2 {
+  margin: 0;
+  color: var(--cor-texto);
+}
+
+.btn-add-product {
+  font-size: 1rem;
+  padding: 0.75rem 1.25rem;
+}
+
+.dashboard-container h3 {
+  font-size: 1.5rem;
+  color: var(--cor-texto);
+  margin-bottom: 1.5rem;
+}
+
+.product-admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.product-admin-table thead tr {
+  background-color: var(--cor-fundo-escuro);
+  color: var(--cor-branca);
+  text-align: left;
+}
+
+.product-admin-table th,
+.product-admin-table td {
+  padding: 12px 15px;
+  border: 1px solid var(--cor-borda);
+  vertical-align: middle;
+}
+
+.product-admin-table tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.product-admin-table tbody tr:hover {
+  background-color: var(--cor-fundo-claro);
+}
+
+.product-admin-table td:nth-child(2) {
+  font-weight: bold;
+  color: var(--cor-sucesso);
+  width: 120px;
+}
+
+.product-admin-table td:nth-child(3) {
+  font-size: 0.9rem;
+  color: var(--cor-secundaria);
+  max-width: 400px;
+}
+
+.product-admin-table .actions-cell {
+  display: flex;
+  gap: 0.5rem;
+  width: 180px;
+}
+
+.btn-edit, .btn-delete {
+  padding: 0.4rem 0.8rem;
+  font-size: 0.9rem;
+}

@@ -1,0 +1,9 @@
+.alert {
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 4px;
+  color: var(--cor-branca);
+}
+
+.alert.error { background-color: var(--cor-perigo); }
+.alert.success { background-color: var(--cor-sucesso); }
